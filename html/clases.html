@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clases - Gym Pulse</title>
+  <link rel="icon" href="/assets/img/OIP.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/clases.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-header">
+      <div class="logo">
+        <img src="/assets/img/OIP.jpg" alt="Logo Gym Pulse">
+      </div>
+
+      <ul class="menu-centro">
+        <li><a class="boton-menu" href="/html/index.html">Inicio</a></li>
+        <li><a class="boton-menu" href="/html/clases.html">Clases</a></li>
+        <li><a class="boton-menu" href="/html/entrenadores.html">Entrenadores</a></li>
+        <li><a class="boton-menu" href="/html/precios.html">Precios</a></li>
+        <li><a class="boton-menu" href="/html/Blog.html">Blog</a></li>
+      </ul>
+
+      <div class="contacto">
+        <a class="boton-menu" href="/html/contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="clases">
+    <h2>Clases Disponibles</h2>
+    
+    <!-- Filtros de categorías -->
+    <div class="filtros">
+      <input type="radio" id="musculacion" name="categoria" checked />
+      <label for="musculacion">Musculación</label>
+      
+      <input type="radio" id="crossfit" name="categoria" />
+      <label for="crossfit">CrossFit</label>
+      
+      <input type="radio" id="yoga" name="categoria" />
+      <label for="yoga">Yoga</label>
+      
+      <input type="radio" id="spinning" name="categoria" />
+      <label for="spinning">Spinning</label>
+
+      <input type="radio" id="pilates" name="categoria" />
+      <label for="pilates">Pilates</label>
+    </div>
+
+    <!-- Galería de clases (masonry) -->
+    <div class="grid-clases">
+      <div class="card">
+        <img src="/assets/img/musculacion.jpg" alt="Clase Musculación" />
+        <div class="card-overlay">
+          <h3>Clase Musculación</h3>
+          <p class="descripcion">Aumenta tu fuerza y resistencia con rutinas personalizadas.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/Clase CrossFit.jpg" alt="Clase CrossFit" />
+        <div class="card-overlay">
+          <h3>Clase CrossFit</h3>
+          <p class="descripcion">Entrenamiento intenso para mejorar tu resistencia y fuerza.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/yoga.png" alt="Clase Yoga" />
+        <div class="card-overlay">
+          <h3>Clase Yoga</h3>
+          <p class="descripcion">Conecta cuerpo y mente mientras mejoras tu flexibilidad.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/Clase Spinning.png" alt="Clase Spinning" />
+        <div class="card-overlay">
+          <h3>Clase Spinning</h3>
+          <p class="descripcion">Siente la adrenalina mientras pedaleas al ritmo de la música.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/img/pilates.jpg" alt="Clase Pilates" />
+        <div class="card-overlay">
+          <h3>Clase Pilates</h3>
+          <p class="descripcion">Siente como tu cuerpo se vulve más flexible.</p>
+        </div>
+      </div>
+      <!-- Agrega más tarjetas de clases según sea necesario -->
+    </div>
+
+    <!-- Tabla de horarios -->
+    <div class="tabla-horarios">
+      <table>
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Hora</th>
+            <th>Clase</th>
+            <th>Disponibilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>10:00 AM</td>
+            <td>Musculación</td>
+            <td><div class="grafico disponibilidad-80"></div></td>
+          </tr>
+          <tr>
+            <td>Martes</td>
+            <td>6:00 PM</td>
+            <td>CrossFit</td>
+            <td><div class="grafico disponibilidad-50"></div></td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>8:00 AM</td>
+            <td>Yoga</td>
+            <td><div class="grafico disponibilidad-70"></div></td>
+          </tr>
+          <tr>
+            <td>Jueves</td>
+            <td>7:00 PM</td>
+            <td>Spinning</td>
+            <td><div class="grafico disponibilidad-60"></div></td>
+          </tr>
+          <tr>
+            <td>Viernes</td>
+            <td>9:00 AM</td>
+            <td>Pilates</td>
+            <td><div class="grafico disponibilidad-60"></div></td>
+          </tr>
+          <!-- Agrega más filas de horarios según sea necesario -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="left">
+      <form>
+        <label>Suscríbete al newsletter</label>
+        <input type="email" required placeholder="Tu email">
+        <button>Suscríbete</button>
+      </form>
+      <div class="social">
+        <a href="https://www.facebook.com/Integral.Gym.Jujuy/">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="https://www.instagram.com/integral.gym.jujuy/">Instagram</a>
+      </div>
+      <div class="contacto">
+        <a href="/html/contacto.html">Contáctanos</a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."></iframe>
+    </div>
+  </footer>
+</body>
+
+</html>

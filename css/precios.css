@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+
+.precios {
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.toggle {
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.toggle-switch {
+  display: none;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #e91e1e;
+}
+
+.mensual {
+  background-color: #E91E63;
+}
+
+.anual {
+  background-color: #9C27B0;
+}
+
+.toggle-switch:checked + .toggle-button.mensual {
+  background-color: #9C27B0;
+  color: white;
+  border: 2px solid #9C27B0;
+}
+
+.toggle-switch:checked + .toggle-button.anual {
+  background-color: #E91E63;
+  color: white;
+  border: 2px solid #E91E63;
+}
+
+.toggle-button:hover {
+  background-color: #d8571b;
+  color: #fff;
+}
+
+.toggle-button:active {
+  background-color: #000000;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+}
+
+.plan-card h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.price {
+  font-size: 2.2rem;
+  color: #E91E63;
+  margin: 10px 0;
+}
+
+.plan-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.plan-card .btn {
+  background-color: #e92c1e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plan-card .btn:hover {
+  background-color: #5e0d0d;
+}

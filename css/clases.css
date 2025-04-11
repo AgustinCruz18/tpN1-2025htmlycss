@@ -1,0 +1,164 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #2d3b45;
+  margin-top: 2rem;
+}
+
+/* Estilos de la barra de navegación */
+
+/* Estilos para la sección de clases */
+.clases {
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.clases .grid-clases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.grid-clases .card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-clases .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-clases .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-clases .card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.grid-clases .card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card .card-overlay h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card .card-overlay .descripcion {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.filtros input[type="radio"] {
+  display: none;
+}
+
+.filtros label {
+  padding: 0.5rem 1rem;
+  background-color: #2d3b45;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filtros input[type="radio"]:checked + label {
+  background-color: #f1c40f;
+}
+
+.filtros label:hover {
+  background-color: #e67e22;
+}
+
+/* Estilos de la tabla responsiva */
+.tabla-horarios {
+  width: 80%; /* Reducir el ancho de la tabla */
+  margin: 2rem auto; /* Centrar la tabla en la página */
+  overflow-x: auto;
+}
+
+.tabla-horarios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-horarios th, .tabla-horarios td {
+  padding: 0.8rem; /* Reducir el padding */
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 0.9rem; /* Reducir el tamaño de fuente */
+}
+
+.tabla-horarios th {
+  background-color: #2d3b45;
+  color: white;
+}
+
+.tabla-horarios td {
+  background-color: #fff;
+}
+
+.tabla-horarios tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Gráficos de disponibilidad */
+.grafico {
+  width: 40px; /* Reducir el tamaño de los gráficos */
+  height: 8px;
+  border-radius: 5px;
+}
+
+.disponibilidad-80 {
+  background-color: #27ae60;
+}
+
+.disponibilidad-50 {
+  background-color: #f39c12;
+}
+
+.disponibilidad-70 {
+  background-color: #2980b9;
+}
+
+.disponibilidad-60 {
+  background-color: #e67e22;
+}

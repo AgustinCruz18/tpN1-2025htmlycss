@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5; /* Gris claro */
+    margin: 0;
+    padding: 0;
+  }
+ 
+  /* Blog Section */
+  .blog {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFFFFF; /* Blanco */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF5722; /* Naranja brillante */
+  }
+  
+  .filters {
+    margin-bottom: 30px;
+  }
+  
+  .tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .tag {
+    background-color: #FF5722; /* Naranja brillante */
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #FFFFFF; /* Blanco */
+    transition: background-color 0.3s;
+  }
+  
+  .tag:hover {
+    background-color: #D84315; /* Naranja oscuro */
+  }
+  
+  /* Articles Section */
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .post {
+    background-color: #FFFFFF; /* Blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  .post.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .post img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .post-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .post-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .btn {
+    background-color: #FF5722; /* Naranja brillante */
+    color: #FFFFFF; /* Blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #D84315; /* Naranja oscuro */
+  }
+  
+  /* Comments Section */
+  .comments {
+    margin-top: 20px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 10px;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #FF5722; /* Naranja brillante */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comment p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  

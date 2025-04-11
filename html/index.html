@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Pulse</title>
+    <link rel="icon" href="/assets/img/OIP.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-header">
+          <div class="logo">
+            <img src="/assets/img/OIP.jpg" alt="Logo Gym Pulse">
+          </div>
+    
+          <ul class="menu-centro">
+            <li><a class="boton-menu" href="/html/index.html">Inicio</a></li>
+            <li><a class="boton-menu" href="/html/clases.html">Clases</a></li>
+            <li><a class="boton-menu" href="/html/entrenadores.html">Entrenadores</a></li>
+            <li><a class="boton-menu" href="/html/precios.html">Precios</a></li>
+            <li><a class="boton-menu" href="/html/Blog.html">Blog</a></li>
+          </ul>
+    
+          <div class="contacto">
+            <a class="boton-menu" href="/html/contacto.html">Contacto</a>
+          </div>
+        </nav>
+      </header>
+    
+
+
+
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="/assets/videos/4761430-uhd_2160_4096_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1 class="animated-text">¡Transfoma Tu vida en PowerHouse GYM!</h1>
+        </div>
+
+    </section>
+    <section class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Transforma Tu Vida en <br><span>PowerHouse Gym</span></h2>
+                <p>
+                    Descubre un lugar donde la fuerza, la motivación y el bienestar se unen para ayudarte a alcanzar tus
+                    objetivos.
+                    ¡Empieza hoy mismo tu camino hacia una mejor versión de ti!
+                </p>
+                <div class="intro-buttons">
+                    <a href="/html/clases.html" class="btn-explorar">Explorar Clases</a>
+                    <a href="/html/sobre-nosotros.html" class="btn-conocer">Conoce Más →</a>
+                </div>
+            </div>
+            <div class="intro-img">
+                <img src="/assets/img/gym.jpg" alt="Interior del gimnasio">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="clases-populares">
+        <h3>Clases Populares en <br>PowerHouse Gym</h3>
+        <div class="clases-grid">
+            <div class="clase">
+                <span class="icono">🏋️</span>
+                <h4>Musculación</h4>
+                <button class="btn-clase" onclick="window.location.href='/html/clases.html'">Ir</button>
+                <p>Mejora tu fuerza, resistencia y flexibilidad con nuestras dinámicas clases de entrenamiento funcional.</p>
+            </div>
+            <div class="clase">
+                <span class="icono">🧘</span>
+                <h4>Yoga para Todos</h4>
+                <button class="btn-clase" onclick="window.location.href='/html/clases.html'">Ir</button>
+                <p>Encuentra equilibrio y serenidad con nuestras clases de yoga adaptadas a todos los niveles.</p>
+            </div>
+            <div class="clase">
+                <span class="icono">❤️</span>
+                <h4>Cardio Intensivo</h4>
+                <button class="btn-clase" onclick="window.location.href='/html/clases.html'">Ir</button>
+                <p>Quema calorías y mejora tu salud cardiovascular con nuestras sesiones de cardio de alta intensidad.</p>
+            </div>
+            <div class="clase">
+                <span class="icono">🥊</span>
+                <h4>Boxeo Fitness</h4>
+                <button class="btn-clase" onclick="window.location.href='/html/clases.html'">Ir</button>
+                <p>Libera estrés y mejora tu coordinación con nuestras energéticas clases de boxeo.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="contador">
+        <h3><span id="socios">0</span>+ Socios Satisfechos</h3>
+    </section>
+
+    <section class="testigo">
+        <h3>Testimonios</h3>
+        <div class="carrusel-simples" id="carrusel">
+            <p class="testimonio">“Este gimnasio me cambió la vida” – Ana</p>
+            <p class="testimonio">“Entreno como nunca antes” – Juan</p>
+            <p class="testimonio">“Ambiente excelente y entrenadores top” – María</p>
+            <p class="testimonio">“Volví a sentirme bien conmigo mismo” – Leo</p>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="left">
+            <form>
+                <label>Suscribite al newsletter</label>
+                <input type="email" required placeholder="Tu email">
+                <button>Suscríbete </button>
+            </form>
+            <div class="social">
+                
+                <!-- Puedes agregar enlaces a redes sociales aquí -->
+                <a href="https://www.facebook.com/Integral.Gym.Jujuy/">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="https://www.instagram.com/integral.gym.jujuy/">Instagram</a>
+            </div>
+            <div class="contacto">
+                <!-- Puedes agregar información de contacto aquí -->
+                <a href="/html/contacto.html">Contactanos</a>
+            </div>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?..."></iframe>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let contador = 0;
+            const span = document.getElementById('socios');
+            const interval = setInterval(() => {
+                contador++;
+                span.innerText = contador;
+                if (contador >= 500) clearInterval(interval);
+            }, 10);
+        });
+    </script>
+    <script>
+        const testimonios = document.querySelectorAll('.testimonio');
+        let index = 0;
+
+        testimonios[index].classList.add('activo');
+
+        setInterval(() => {
+            const actual = testimonios[index];
+            actual.classList.remove('activo');
+            actual.classList.add('saliente');
+
+            index = (index + 1) % testimonios.length;
+            const siguiente = testimonios[index];
+            siguiente.classList.remove('saliente');
+            siguiente.classList.add('activo');
+
+            setTimeout(() => {
+                actual.classList.remove('saliente');
+            }, 1500); // igual que el tiempo de transición
+        }, 4000);
+    </script>
+
+
+</body>
+
+</html>

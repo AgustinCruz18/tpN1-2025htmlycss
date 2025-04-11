@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Fitness</title>
+  <link rel="icon" href="/assets/img/OIP.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav-header">
+      <div class="logo">
+        <img src="/assets/img/OIP.jpg" alt="Logo Gym Pulse">
+      </div>
+      <ul class="menu-centro">
+        <li><a class="boton-menu" href="/html/index.html">Inicio</a></li>
+        <li><a class="boton-menu" href="/html/clases.html">Clases</a></li>
+        <li><a class="boton-menu" href="/html/entrenadores.html">Entrenadores</a></li>
+        <li><a class="boton-menu" href="/html/precios.html">Precios</a></li>
+      </ul>
+      <div class="contacto">
+        <a class="boton-menu" href="/html/contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BLOG SECTION -->
+  <section class="blog">
+    <h1>Blog de Fitness</h1>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <div class="tags">
+        <span class="tag" onclick="filterArticles('todos')">Todos</span>
+        <span class="tag" onclick="filterArticles('nutricion')">Nutrición</span>
+        <span class="tag" onclick="filterArticles('entrenamiento')">Entrenamiento</span>
+        <span class="tag" onclick="filterArticles('bienestar')">Bienestar</span>
+        
+      </div>
+    </div>
+
+    <!-- ARTICLES -->
+    <div class="articles">
+      <article class="post nutricion">
+        <img src="/assets/img/resistencia.jpg" alt="Artículo 1">
+        <div class="post-info">
+          <h2>Cómo mejorar tu resistencia en el gimnasio</h2>
+          <p>En este artículo te enseñamos cómo mejorar tu resistencia con algunos consejos prácticos...</p>
+          <button class="btn leer-mas">Leer más</button>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="avatar"></div>
+            <p><strong>Juan Perez</strong> - Muy interesante el artículo, lo voy a intentar en mis próximas sesiones.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="post bienestar">
+        <img src="/assets/img/comida.jpg" alt="Artículo 2">
+        <div class="post-info">
+          <h2>Alimentos que debes evitar para un mejor rendimiento</h2>
+          <p>En este post aprenderás cuáles son los alimentos que pueden sabotear tu entrenamiento...</p>
+          <button class="btn leer-mas">Leer más</button>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="avatar"></div>
+            <p><strong>Ana Gómez</strong> - ¡Qué buen consejo! Lo pondré en práctica.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="post entrenamiento">
+        <img src="/assets/img/masaMuscular.jpg" alt="Artículo 3">
+        <div class="post-info">
+          <h2>Los mejores ejercicios para aumentar masa muscular</h2>
+          <p>Te mostramos una rutina para ganar masa muscular rápidamente...</p>
+          <button class="btn leer-mas">Leer más</button>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="avatar"></div>
+            <p><strong>Carlos Lopez</strong> - Excelente rutina, me ha servido mucho.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="post nutricion">
+        <img src="/assets/img/proteinasMejor.jpg" alt="Artículo 4">
+        <div class="post-info">
+          <h2>Suplementos que pueden mejorar tu rendimiento en el gimnasio</h2>
+          <p>Descubre cuáles son los suplementos que realmente pueden ayudarte a mejorar tu rendimiento...</p>
+          <button class="btn leer-mas">Leer más</button>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="avatar"></div>
+            <p><strong>Laura Gómez</strong> - Interesante, voy a investigar más sobre esos suplementos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- More articles here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="left">
+      <form>
+        <label>Suscribite al newsletter</label>
+        <input type="email" required placeholder="Tu email">
+        <button>Suscríbete </button>
+      </form>
+      <div class="social">
+        <a href="https://www.facebook.com/Integral.Gym.Jujuy/">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="https://www.instagram.com/integral.gym.jujuy/">Instagram</a>
+      </div>
+      <div class="contacto">
+        <a href="/html/contacto.html">Contactanos</a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."></iframe>
+    </div>
+  </footer>
+
+  <!-- JS for Scroll Reveal and Filters -->
+  <script>
+    const posts = document.querySelectorAll('.post');
+
+    window.addEventListener('scroll', () => {
+      posts.forEach(post => {
+        const postTop = post.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (postTop < windowHeight - 100) {
+          post.classList.add('reveal');
+        }
+      });
+    });
+
+    function filterArticles(category) {
+      posts.forEach(post => {
+        if (category === 'todos') {
+          post.style.display = 'block';
+        } else {
+          if (post.classList.contains(category)) {
+            post.style.display = 'block';
+          } else {
+            post.style.display = 'none';
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+h2 {
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño grande para destacarlo */
+  font-weight: bold;
+  color: #333; /* Color oscuro para el texto */
+  margin-bottom: 1.5rem; /* Espacio abajo para separarlo del contenido */
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px; /* Ajusta el espacio entre el texto y la línea */
+  width: 80px; /* Longitud de la línea */
+  height: 3px; /* Grosor de la línea */
+  background-color: #ff6347; /* Color de la línea */
+  border-radius: 5px;
+}
+
+h2 span {
+  font-style: italic;
+  color: #ff6347; /* Un color que haga contraste, como el de la línea */
+}
+
+.entrenadores {
+  padding: 3rem;
+  margin-bottom: 100px; /* Ajusta este valor según lo necesites */
+}
+
+
+.entrenadores-container {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.entrenador {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-back {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.star {
+  color: gold;
+}
+
+.star:hover {
+  color: darkorange;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
